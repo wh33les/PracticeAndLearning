@@ -1,6 +1,3 @@
-title: Welcome to Wheeles' Homepage!
-description: I haven't decided exactly how I want this site to go yet.
-
 ## Welcome to Wheeles' Github Page
 
 You can use the [editor on GitHub](https://github.com/wh33les/wheeles/edit/master/index.md) to maintain and preview the content for your website in Markdown files.
