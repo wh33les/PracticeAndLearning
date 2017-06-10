@@ -1,5 +1,6 @@
-## Examples of data structures, in C
-### Arrays (a.k.a. _lists_ or _vectors_)
+# Examples of data structures, in C
+## Arrays (a.k.a. _lists_ or _vectors_)
+What it is, also dynamic arrays.
 ```c
 /* Prompts the user to create an array of digits from 0 to 9 of size ARRAY_SIZE */
 #define ARRAY_SIZE_n 10 
@@ -17,17 +18,32 @@ int main(void)
   return 0;
 } /* main */
 ```
-* Pros: Constant-time access, as long as the address of an element is known.  Efficient storage, since no formatting data or pointers are associated.  Memory locality, i.e., elements are next to each other in memory.  Unsorted arrays are fast for maintenance operations 
-* Cons: Unsorted arrays are slow for search operations. 
-* use when:
-* big-Oh properties of basic operations, e.g., find, add, remove
+### Pros 
+* Constant-time access, as long as the address of an element is known.  
+* Efficient storage, since no formatting data or pointers are associated.  
+* Memory locality, i.e., elements are next to each other in memory.  
+* Unsorted arrays: fast for maintenance operations 
+### Cons 
+* Unsorted arrays are slow for search operations. 
+### use when:
+### Big-Oh properties of basic operations, e.g., find, add, remove
+(_n_ = no. of elements in the array)
 
-Also: dynamic arrays
-### Linked lists
-### Queues
+Operation | Unsorted | Sorted
+--------- | -------- | ------
+Find | _O(n)_ | _O(_ log _n)_
+Add | _O(1)_ | _O(n)_
+Remove | _O(1)_ | _O(n)_
+Successor | _O(n)_ | _O(1)_
+Predecessor | _O(n)_ | _O(1)_
+Min | _O(n)_ | _O(1)_
+Max | _O(n)_ | _O(1)_
+
+## Linked lists
+## Queues
 FIFO
-### Stacks
+## Stacks
 LIFO
-### Hashtables
-### Binary search trees
-### Priority queues/ heaps
+## Hashtables
+## Binary search trees
+## Priority queues/ heaps
