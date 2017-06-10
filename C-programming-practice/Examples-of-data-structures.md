@@ -41,8 +41,6 @@ Max | _O(n)_ | _O(1)_
 
 __Question:__ Why is deletion _O(1)_ for unsorted lists?
 
-__Answer:__
-
 ## Linked lists
 What it is.
 ```c
@@ -58,7 +56,21 @@ What it is.
 
 Operation | Unsorted | Sorted
 --------- | -------- | ------
-<table></table> | <table cellpadding=0><tr><td>Singly</td><td>Doubly</td></tr></table> | <table><td>Singly</td><td>Doubly</td></table>
+Find | _O(n)_ | _O(n)_
+Add | _O(1)_ | _O(n)_
+Remove | _O(n)_ (singly-); _O(1)_ (doubly-) | _O(n)_ (singly-); _O(1)_ (doubly-)
+Successor | _O(n)_ | _O(1)_
+Predecessor | _O(n)_ | _O(n)_ (singly-); _O(1)_ (doubly-) 
+Min | _O(n)_ | _O(1)_
+Max | _O(n)_ | _O(1)_
+
+__Question:__ Why isn't the search operation _O(_ log _n)_ for sorted linked lists?
+
+__Question:__ Why is deletion _O(n)_ for unsorted singly-linked lists?
+
+__Question:__ Why is deletion _O(1)_ for sorted doubly-linked lists?
+
+__Question:__ Why is max _O(1)_ for unsorted singly-linked lists?
 
 ## Queues
 FIFO
