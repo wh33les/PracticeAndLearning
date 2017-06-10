@@ -1,8 +1,6 @@
 # Examples of data structures, in C
 ## Arrays (a.k.a. _lists_ or _vectors_)
-{% comment %} 
-  What it is, also dynamic arrays. 
-{% endcomment %}
+{::comment} What it is, also dynamic arrays. {:/comment}
 ```c
 /* Prompts the user to create an array of digits from 0 to 9 of size ARRAY_SIZE */
 #define ARRAY_SIZE_n 10 
