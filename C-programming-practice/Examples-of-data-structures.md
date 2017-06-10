@@ -39,7 +39,27 @@ Predecessor | _O(n)_ | _O(1)_
 Min | _O(n)_ | _O(1)_
 Max | _O(n)_ | _O(1)_
 
+__Question:__ Why is deletion _O(1)_ for unsorted lists?
+
+__Answer:__
+
 ## Linked lists
+What it is.
+```c
+
+```
+### Pros 
+* 
+### Cons 
+*  
+### use when:
+### Big-Oh properties of basic operations, e.g., find, add, remove
+(_n_ = no. of elements in the array)
+
+Operation | Unsorted | Sorted
+--------- | -------- | ------
+<table></table> | <table cellpadding=0><tr><td>Singly</td><td>Doubly</td></tr></table> | <table><td>Singly</td><td>Doubly</td></table>
+
 ## Queues
 FIFO
 ## Stacks
