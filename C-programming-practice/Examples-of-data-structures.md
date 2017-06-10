@@ -17,15 +17,17 @@ int main(void)
   return 0;
 } /* main */
 ```
-* pros:
-* cons:
+* Pros: Constant-time access, as long as the address of an element is known.  Efficient storage, since no formatting data or pointers are associated.  Memory locality, i.e., elements are next to each other in memory.  Unsorted arrays are fast for maintenance operations 
+* Cons: Unsorted arrays are slow for search operations. 
 * use when:
 * big-Oh properties of basic operations, e.g., find, add, remove
 
 Also: dynamic arrays
 ### Linked lists
 ### Queues
+FIFO
 ### Stacks
+LIFO
 ### Hashtables
 ### Binary search trees
 ### Priority queues/ heaps
