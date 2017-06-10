@@ -25,8 +25,8 @@ int main(void)
 * Unsorted arrays: fast for maintenance operations 
 ### Cons 
 * Unsorted arrays are slow for search operations. 
-### use when:
-### Big-Oh properties of basic operations, e.g., find, add, remove
+<!--### use when:-->
+### Big-Oh properties of basic operations (e.g., find, add, remove)
 (_n_ = no. of elements in the array)
 
 Operation | Unsorted | Sorted
@@ -42,7 +42,7 @@ Max | _O(n)_ | _O(1)_
 __Question:__ Why is deletion _O(1)_ for unsorted lists?
 
 ## Linked lists
-What it is.
+<!--What it is.
 ```c
 
 ```
@@ -50,8 +50,8 @@ What it is.
 * 
 ### Cons 
 *  
-### use when:
-### Big-Oh properties of basic operations, e.g., find, add, remove
+### use when:-->
+### Big-Oh properties of basic operations (e.g., find, add, remove)
 (_n_ = no. of elements in the array)
 
 Operation | Unsorted | Sorted
@@ -64,13 +64,11 @@ Predecessor | _O(n)_ | _O(n)_ (singly-); _O(1)_ (doubly-)
 Min | _O(n)_ | _O(1)_
 Max | _O(n)_ | _O(1)_
 
-__Question:__ Why isn't the search operation _O(_ log _n)_ for sorted linked lists?
-
-__Question:__ Why is deletion _O(n)_ for unsorted singly-linked lists?
-
-__Question:__ Why is deletion _O(1)_ for sorted doubly-linked lists?
-
-__Question:__ Why is max _O(1)_ for unsorted singly-linked lists?
+__Questions:__ 
+1. Why isn't the search operation _O(_ log _n)_ for sorted linked lists?
+1. Why is deletion _O(n)_ for unsorted singly-linked lists?
+1. Why is deletion _O(1)_ for sorted doubly-linked lists?
+1. Why is max _O(1)_ for unsorted singly-linked lists?
 
 ## Queues
 FIFO
