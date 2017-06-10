@@ -43,8 +43,29 @@ __Question:__ Why is deletion _O(1)_ for unsorted lists?
 
 ## Linked lists
 A __linked list__ is an array with an additional structure, such that each element can have at least one pointer to another element or elements in the array.  In a __singly-linked__ list, each element (besides the last) contains a pointer to the next element in the array.  In a __doubly-linked__ list, each element (besides the first), in addition, has a pointer to its predecessor.  
-<!--```c
-
+<!--
+```c
+/* The following is an example of a list of people in a line, for example, at the lunch counter. 
+*/
+/* PREAMBLE */
+/* Prototype Declarations */
+  typedef struct singly_linked_list /* Linked lists are not predefined data types the way arrays are. */
+    {
+    char person[10]; /* Each field contains the name of an individual, or at least the first ten characters of their name. */ 
+    struct singly_linked_list *next; /* IS THE TAG USE APPROPRIATE HERE, OR IS IT ENOUGH TO JUST USE THE TYPE-ID? */
+      /* This is a pointer to the next node in the linked list.
+        This data structure is recursive, and so the pointer *next is to the address 
+        of the first field of a smaller linked list. 
+      */
+    } SINGLL; /* My abbreviation for "singly-linked list" */ 
+int main(void)  
+{
+  /* Local definitions */
+  SINGLL lunchLineToday; /* Defines the singly-linked list lunchLineToday */
+  /* Statement(s) */
+  lunchLineToday = {Bobby, Tammy, Joe, Noel, Marieclair};
+  return 0;
+} /* main */
 ```
 -->
 ### Pros 
