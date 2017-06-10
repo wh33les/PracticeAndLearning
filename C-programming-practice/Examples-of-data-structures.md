@@ -50,8 +50,8 @@ A __linked list__ is an array with an additional structure, such that each eleme
 ### Pros 
 * For large lists, pointers to data are often faster to move and manipulate than the data itself.  
 * Insertion and deletion becomes more efficient than for unlinked lists.
-### Cons 
-*  
+<!--### Cons 
+*  -->
 <!--### use when:-->
 ### Big-Oh properties of basic operations (e.g., find, add, remove)
 (_n_ = no. of elements in the array)
@@ -76,6 +76,7 @@ __Questions:__
 FIFO
 ## Stacks
 LIFO
-## Hashtables
+<!--## Hashtables
 ## Binary search trees
 ## Priority queues/ heaps
+-->
