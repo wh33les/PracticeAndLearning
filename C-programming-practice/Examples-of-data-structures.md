@@ -102,7 +102,7 @@ __Questions:__
 1. Why is deletion _O(1)_ for sorted doubly-linked lists?
 1. Why is max _O(1)_ for unsorted singly-linked lists?
 </details>
-
+<!--
 ## Queues
 <details>
 <summary>FIFO </summary>
@@ -114,7 +114,7 @@ __Questions:__
 <summary>LIFO </summary>
 
 </details>
-
+-->
 <!--## Hashtables-->
 
 ## Binary search trees
