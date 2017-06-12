@@ -108,7 +108,7 @@ __Questions:__
 <summary>Click to expand. </summary>
 
 A __queue__ is a container structure in which data is accessed in the order in which it was stored.  In other words, data access is independent of content and satisifies "first in, first out" (FIFO).  A queue can be implemented using an doubly-linked list _Q_ with attributes _Q.head_ and _Q.tail_.
-```C
+```c
 typedef struct queue {
   item_type item;
   struct queue *next;
@@ -126,13 +126,18 @@ typedef struct queue {
 <summary>Click to expand. </summary>
 
 A __stack__ is a container structure in which data is accessed in the reverse order in which it was stored.  In other words, data accessed is independent of content and satisfies "last in, first out" (LIFO).  One way to implement a stack is using an unsorted array of fixed size.
-```C 
+```c 
 typedef struct stack {
-  int capacityOfStack
-  int topOfStack
-  int itemsInTheStack[]
+  int capacityOfStack;
+  int topOfStack;
+  int itemsInTheStack[];
   } STACK;
 ```
+### Pros
+* Used in backtracking.
+### Cons
+* Use by programming languages presents security issues.
+
 </details>
 
 <!--## Hashtables-->
