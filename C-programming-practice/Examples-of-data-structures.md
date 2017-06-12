@@ -1,5 +1,7 @@
 # Examples of data structures, in C
-## Arrays (a.k.a. _lists_ or _vectors_)
+
+<details>
+<summary>## Arrays (a.k.a. _lists_ or _vectors_)</summary>
 An __array__ is a data structure consisting of a list of __elements__ of the same type, for example integers, floats, or characters.  A character array is sometimes referred to as a __string__.  An array's length _n_ is fixed, except for in the case of a __dynamic array__, which doubles in length when the number of elements assigned to it has exceeded _n_.  Elements of an array are given by their __index__, or position in the array.  In C, indices begin at 0.  In other languages indices can begin at 1.  An array may be sorted or unsorted.
 ```c
 /* Prompts the user to create an array of digits from 0 to 9 of size ARRAY_SIZE_n 
@@ -40,6 +42,8 @@ Min | _O(n)_ | _O(1)_
 Max | _O(n)_ | _O(1)_
 
 __Question:__ Why is deletion _O(1)_ for unsorted lists?
+</details>
+
 
 ## Linked lists
 A __linked list__ is an array with an additional structure, such that each element can have at least one pointer to another element or elements in the array.  In a __singly-linked__ list, each element (besides the last) contains a pointer to the next element in the array.  In a __doubly-linked__ list, each element (besides the first), in addition, has a pointer to its predecessor.  
@@ -97,7 +101,30 @@ __Questions:__
 FIFO
 ## Stacks
 LIFO
-<!--## Hashtables
+<!--## Hashtables-->
+
 ## Binary search trees
-## Priority queues/ heaps
+A __binary search tree__ is a binary tree with a unique labelling such that for any node with key _x_, all nodes to the left of _x_ have key values strictly less than _x_ and all nodes to the right have key values strictly larger than _x_.  Basic dictionary operations on a binary search tree are proportional the the height _h_ of the tree.  In a worst-case scenario, the tree may consist of a single chain and _h=n_, the total number of nodes on the tree.  However, it can be shown that the expected height of a randomly built binary search tree is proportional to lg _n_.
+```C
+/* Type declaration for a binary search tree 
+*/
+typedef struct bin_st {
+} BIN_ST;
+```
+### Pros
+### Cons
+### Big-Oh properties 
+(_h_ = height of the tree; between lg _n_ and _n_)
+
+Operation | Worst time
+--------- | ----------
+Find | _O(h)_ 
+Add | _O(h)_ 
+Remove | _O(h)_  
+Successor | _O(h)_ 
+Predecessor | _O(h)_ 
+Min | _O(h)_ 
+Max | _O(h)_ 
+
+<!--## Priority queues/ heaps
 -->
