@@ -118,6 +118,9 @@ __Questions:__
 <!--## Hashtables-->
 
 ## Binary search trees
+<details>
+<summary>Click to expand. </summary>
+
 A __binary search tree__ is a binary tree with a unique labelling such that for any node with key _x_, all nodes to the left of _x_ have key values strictly less than _x_ and all nodes to the right have key values strictly larger than _x_.  Basic dictionary operations on a binary search tree are proportional the the height _h_ of the tree.  In a worst-case scenario, the tree may consist of a single chain and _h=n_, the total number of nodes on the tree.  However, it can be shown that the expected height of a randomly built binary search tree is proportional to lg _n_.
 ```C
 /* Type declaration for a binary search tree 
@@ -139,6 +142,8 @@ Successor | _O(h)_
 Predecessor | _O(h)_ 
 Min | _O(h)_ 
 Max | _O(h)_ 
+
+</details>
 
 <!--## Priority queues/ heaps
 -->
