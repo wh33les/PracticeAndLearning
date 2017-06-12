@@ -104,9 +104,17 @@ __Questions:__
 </details>
 
 ## Queues
-FIFO
+<details>
+<summary>FIFO </summary>
+
+</details>
+
 ## Stacks
-LIFO
+<details>
+<summary>LIFO </summary>
+
+</details>
+
 <!--## Hashtables-->
 
 ## Binary search trees
