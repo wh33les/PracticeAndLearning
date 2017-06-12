@@ -102,19 +102,39 @@ __Questions:__
 1. Why is deletion _O(1)_ for sorted doubly-linked lists?
 1. Why is max _O(1)_ for unsorted singly-linked lists?
 </details>
-<!--
+
 ## Queues
 <details>
-<summary>FIFO </summary>
+<summary>Click to expand. </summary>
+
+A __queue__ is a container structure in which data is accessed in the order in which it was stored.  In other words, data access is independent of content and satisifies "first in, first out" (FIFO).  A queue can be implemented using an doubly-linked list _Q_ with attributes _Q.head_ and _Q.tail_.
+```C
+typedef struct queue {
+  item_type item;
+  struct queue *next;
+  struct queue *prev;
+} QUEUE;
+```
+### Pros
+* Not necessary to predetermine its size.
+### Cons
 
 </details>
 
 ## Stacks
 <details>
-<summary>LIFO </summary>
+<summary>Click to expand. </summary>
 
+A __stack__ is a container structure in which data is accessed in the reverse order in which it was stored.  In other words, data accessed is independent of content and satisfies "last in, first out" (LIFO).  One way to implement a stack is using an unsorted array of fixed size.
+```C 
+typedef struct stack {
+  int capacityOfStack
+  int topOfStack
+  int itemsInTheStack[]
+  } STACK;
+```
 </details>
--->
+
 <!--## Hashtables-->
 
 ## Binary search trees
