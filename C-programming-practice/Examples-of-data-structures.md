@@ -1,7 +1,9 @@
 # Examples of data structures, in C
 
+## Arrays (a.k.a. _lists_ or _vectors_) 
 <details>
-<summary>## Arrays (a.k.a. _lists_ or _vectors_)</summary>
+<summary>Click to expand. </summary>
+
 An __array__ is a data structure consisting of a list of __elements__ of the same type, for example integers, floats, or characters.  A character array is sometimes referred to as a __string__.  An array's length _n_ is fixed, except for in the case of a __dynamic array__, which doubles in length when the number of elements assigned to it has exceeded _n_.  Elements of an array are given by their __index__, or position in the array.  In C, indices begin at 0.  In other languages indices can begin at 1.  An array may be sorted or unsorted.
 ```c
 /* Prompts the user to create an array of digits from 0 to 9 of size ARRAY_SIZE_n 
@@ -42,10 +44,13 @@ Min | _O(n)_ | _O(1)_
 Max | _O(n)_ | _O(1)_
 
 __Question:__ Why is deletion _O(1)_ for unsorted lists?
+
 </details>
 
-
 ## Linked lists
+<details>
+<summary>Click to expand. </summary>
+
 A __linked list__ is an array with an additional structure, such that each element can have at least one pointer to another element or elements in the array.  In a __singly-linked__ list, each element (besides the last) contains a pointer to the next element in the array.  In a __doubly-linked__ list, each element (besides the first), in addition, has a pointer to its predecessor.  
 <!--
 ```c
@@ -96,6 +101,7 @@ __Questions:__
 1. Why is deletion _O(n)_ for unsorted singly-linked lists?
 1. Why is deletion _O(1)_ for sorted doubly-linked lists?
 1. Why is max _O(1)_ for unsorted singly-linked lists?
+</details>
 
 ## Queues
 FIFO
