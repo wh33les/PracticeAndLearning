@@ -170,5 +170,5 @@ Max | _O(h)_
 
 </details>
 
-<!--## Priority queues/ heaps
--->
+## Priority queues/ heaps
+A __heap__ is a binary tree which is completely filled up to its lowest row, which is filled from the left to a certain point.
