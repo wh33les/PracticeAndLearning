@@ -1,6 +1,9 @@
 # Sorting algorithms
 
 ## Selection sort
+<details>
+<summary>Click to expand. </summary>
+
 __Selection sort__ divides an array into a sorted subarray _A_ of size _i_ on the left and an unsorted subarray _B_ of size _n-i_ on the right.  Using a loop, it searches for the smallest element in _B_ and places it in the _(i+1)_ st spot in the full array by exchanging it with the first element of _B_.    
 ```c
 /* Selection sort implementation
@@ -51,6 +54,8 @@ void exchange(int key_number_1, int key_number_2)
   return;
 }
 ```
+</details>
+
 ## Insertion sort
 ### Pros
 * Runs __in place__, i.e., only a constant number of elements in the input array are stored outside of the array in running the algorithm.
