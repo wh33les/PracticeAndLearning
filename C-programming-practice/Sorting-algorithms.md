@@ -179,6 +179,9 @@ void bubbleSort(int array_to_sort[], int array_size)
 /* THE EXCHANGE FUNCTION */
 ```
 The outer (_i_) loop is called _n-1_ times.  However, on the first pass the inner (_j_) loop iterates _n-1_ times; on the second pass it iterates _n-2_ times; and so on. 
+
+$$n-1$$
+
 </details>
 
 ## Counting sort
