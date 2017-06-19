@@ -1,4 +1,4 @@
-## Welcome to Wheeles' Github Page
+## Welcome to Wheeles' Github (Project) Page
 
 Whenever I commit to this repository, GitHub Pages will run [Jekyll](https://jekyllrb.com/) to rebuild the pages in my site, from the content in my Markdown files.
 
