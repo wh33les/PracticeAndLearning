@@ -1,8 +1,3 @@
----
-layout: page
-title: Sorting algorithms.  
----
-
 # Sorting algorithms
 
 ## Selection sort
