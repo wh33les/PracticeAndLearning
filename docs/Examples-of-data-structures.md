@@ -140,7 +140,7 @@ typedef struct stack {
 
 </details>
 
-<!--## Hashtables-->
+## Hashtables
 
 ## Binary search trees
 <details>
