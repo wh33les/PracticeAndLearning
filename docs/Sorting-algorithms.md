@@ -96,15 +96,15 @@ void insertionSort(int array_to_sort[], int array_size)
       {
       if (current_entry < array_to_sort[j])
         {
-        array_to_sort[j+1] = array_to_sort[j]; /* shifts the elements up one in the array */
+        array_to_sort[j + 1] = array_to_sort[j]; /* shifts the elements up one in the array */
         j--;
         } /* if */
       else
         located = TRUE;
-      array_to_sort[j + 1] = current_entry;  /* the insertion */
-      } /* for loop j */
-   } /* for loop i */
-   return;
+    } /* for loop j */    
+    array_to_sort[j + 1] = current_entry;  /* the insertion */
+  } /* for loop i */
+  return;
 }
 ```
 ### Pros
