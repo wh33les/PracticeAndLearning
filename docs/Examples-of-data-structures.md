@@ -79,8 +79,8 @@ int main(void)
 ### Pros 
 * For large lists, pointers to data are often faster to move and manipulate than the data itself.  
 * Insertion and deletion becomes more efficient than for unlinked lists.
-<!--### Cons 
-*  -->
+### Cons 
+* To associate pointers to data takes more memory. 
 <!--### use when:-->
 ### Big-Oh properties of basic operations (e.g., find, add, remove)
 (_n_ = no. of elements in the array)
@@ -143,7 +143,7 @@ typedef struct stack {
 <details>
 <summary>Click to expand. </summary>
 
-A __binary search tree__ is a binary tree with a unique labelling such that for any node with key _x_, all nodes to the left of _x_ have key values strictly less than _x_ and all nodes to the right have key values strictly larger than _x_.  Basic dictionary operations on a binary search tree are proportional the the height _h_ of the tree.  In a worst-case scenario, the tree may consist of a single chain and _h=n_, the total number of nodes on the tree.  However, it can be shown that the expected height of a randomly built binary search tree is proportional to lg _n_.
+A __binary search tree__ is a binary tree with a unique labelling such that for any __node__ (vertex) with key _x_, all nodes to the left of _x_ have key values strictly less than _x_ and all nodes to the right have key values strictly larger than _x_.  Basic dictionary operations on a binary search tree are proportional the the height _h_ of the tree.  In a worst-case scenario, the tree may consist of a single chain and _h=n_, the total number of nodes on the tree.  However, it can be shown that the expected height of a randomly built binary search tree is proportional to lg _n_.
 ```c
 /* Type declaration for a binary search tree 
 */
@@ -167,7 +167,7 @@ Max | _O(h)_
 </details>
 
 ## Priority queues/ heaps
-A __heap__ is a binary tree which is completely filled up to its lowest row, which is filled from the left to a certain point.  Each __node__ (vertex) of the tree is stored as an element in an array.  The attributes of an array _A[0..n-1]_ that represents a heap are its length (_n_) and the size of the heap, which may be less than _A.length_.  If the root of the tree has index _0_ then each node _i_ has a left and right __child__, along with a __parent__.  The attributes of an element _A[i]_ for _0 <= i < A.heap-size_ are given in the following table:
+A __heap__ is a binary tree which is completely filled up to its lowest row, which is filled from the left to a certain point.  Each node  of the tree is stored as an element in an array.  The attributes of an array _A[0..n-1]_ that represents a heap are its length (_n_) and the size of the heap, which may be less than _A.length_.  If the root of the tree has index _0_ then each node _i_ has a left and right __child__, along with a __parent__.  The attributes of an element _A[i]_ for _0 <= i < A.heap-size_ are given in the following table:
 
 Attribute | Value
 ----------|------
@@ -176,3 +176,5 @@ _A[i].left_ | _A[2i+1]_
 _A[i].right_ | _A[2(i+1)]_
 
 If a value cannot be computed, for example, if _2i > A.heap-size_, then the value is `nil`.
+
+A __(max-)priority queue__ is a set _S_ permitting the usual dictionary operations Add and Max, along with ExtractMax, which finds and removes the largest key from _S_, and IncreaseKey, which increases the value of a key _x_ in _S_ to a new value, _k_.  A heap can be used to implement a priority queue.  
