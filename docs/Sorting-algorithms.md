@@ -63,6 +63,7 @@ void exchange(int key_number_1, int key_number_2)
   return;
 }
 ```
+The inner for-loop consists of at least 1 (checking the <code>if</code> condition) + 3 (the exchange operation) and at most 2 (the operation <code>smallest = j</code> is implemented) + 3 operations.  Taking the outer loop into account, the inner for-loop is run a total of _(n-1) + (n-2) + ... + 1_ times.  A well-known combinatorial formula says this total is _(n-1)n/2_.  It follows that the upper bound on the complexity of selection sort is _O(n<sup>2</sup>)_ and the lower bound is also _Omega(n<sup>2</sup>)_, and so selection sort is _Theta(n<sup>2</sup>)_.   
 </details>
 
 ## Insertion sort
@@ -109,7 +110,9 @@ void insertionSort(int array_to_sort[], int array_size)
 ### Pros
 * Runs __in place__, i.e., only a constant number of elements in the input array are stored outside of the array in running the algorithm.
 
-Runs in _O(n<sup>2</sup>)_ time.
+In the best-case scenario, the inner for-loop will run only once for each iteration of the outer loop, and consists of 3 operations plus checking the loop condition.  The outer loop must run _n-1_ times, with 3 operations plus the inner for-loop.  Thus the best-case complexity of insertion sort is _Omega(n)_.  In the worst-case, the inner for-loop runs _i-1_ times for every _i_, and so the complexity is on the same order of _2 + 3 + ... + n-1_, _O(n<sup>2</sup>)_.  It follows that insertion sort is _Theta(n<sup>2</sup>)_.
+
+An alternate implementation uses a while-loop in place of the inner for-loop and calls <code>exchange</code>, which S. Skiena (_The Algorithm Design Manual, 2nd Ed._) shows is _O(n<sup>2</sup>)_. 
 </details>
 
 ## Quicksort
