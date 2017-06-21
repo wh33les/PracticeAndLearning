@@ -106,7 +106,7 @@ __Questions:__
 <details>
 <summary>Click to expand. </summary>
 
-A __queue__ is a container structure in which data is accessed in the order in which it was stored.  In other words, it is a set whose Remove (__Dequeue__) operation satisifies "first in, first out" (FIFO).  A queue can be implemented using an doubly-linked list _Q_ with attributes _Q.head_ and _Q.tail_.  The Add operation is sometimes called __Enqueue__.
+A __queue__ is a container structure in which data is accessed in the order in which it was stored.  In other words, it is a set whose Remove (__Dequeue__) operation satisifies "first in, first out" (FIFO).  The Add operation is called __Enqueue__.  A queue can be implemented using an doubly-linked list _Q_ with attributes _Q.head_ and _Q.tail_.  
 ```c
 typedef struct queue {
   item_type item;
