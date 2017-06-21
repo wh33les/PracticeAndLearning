@@ -31,7 +31,6 @@ int main(void)
 * Unsorted arrays: fast for maintenance (e.g., add, remove) operations. 
 ### Cons 
 * Unsorted arrays: slow for search operations (e.g., successor/predecessor, minimum/maximum). 
-<!--### use when:-->
 ### Big-Oh properties of basic operations (e.g., find, add, remove)
 Operation | Unsorted | Sorted
 --------- | -------- | ------
@@ -51,37 +50,15 @@ __Question:__ Why is deletion _O(1)_ for unsorted lists?
 <summary>Click to expand. </summary>
 
 A __linked list__ is an array with an additional structure, such that each element can have at least one pointer to another element or elements in the array.  In a __singly-linked__ list, each element (besides the last) contains a pointer to the next element in the array.  In a __doubly-linked__ list, each element (besides the first), in addition, has a pointer to its predecessor.  
-<!--
 ```c
-/* The following is an example of a list of people in a line, for example, at the lunch counter. 
-*/
-/* PREAMBLE */
-/* Prototype Declarations */
-  typedef struct singly_linked_list /* Linked lists are not predefined data types the way arrays are. */
-    {
-    char person[10]; /* Each field contains the name of an individual, or at least the first ten characters of their name. */ 
-    struct singly_linked_list *next; /* IS THE TAG USE APPROPRIATE HERE, OR IS IT ENOUGH TO JUST USE THE TYPE-ID? */
-      /* This is a pointer to the next node in the linked list.
-        This data structure is recursive, and so the pointer *next is to the address 
-        of the first field of a smaller linked list. 
-      */
-    } SINGLL; /* My abbreviation for "singly-linked list" */ 
-int main(void)  
-{
-  /* Local definitions */
-  SINGLL lunchLineToday; /* Defines the singly-linked list lunchLineToday */
-  /* Statement(s) */
-  lunchLineToday = {Bobby, Tammy, Joe, Noel, Marieclair};
-  return 0;
-} /* main */
+typedef struct { /* Linked lists are not predefined data types the way arrays are. */ 
+} 
 ```
--->
 ### Pros 
 * For large lists, pointers to data are often faster to move and manipulate than the data itself.  
 * Insertion and deletion becomes more efficient than for unlinked lists.
 ### Cons 
 * To associate pointers to data takes more memory. 
-<!--### use when:-->
 ### Big-Oh properties of basic operations (e.g., find, add, remove)
 (_n_ = no. of elements in the array)
 
@@ -108,11 +85,8 @@ __Questions:__
 
 A __queue__ is a container structure in which data is accessed in the order in which it was stored.  In other words, it is a set whose Remove (__Dequeue__) operation satisifies "first in, first out" (FIFO).  The Add operation is called __Enqueue__.  A queue can be implemented using an doubly-linked list _Q_ with attributes _Q.head_ and _Q.tail_.  
 ```c
-typedef struct queue {
-  item_type item;
-  struct queue *next;
-  struct queue *prev;
-} QUEUE;
+typedef struct {
+} 
 ```
 ### Pros
 * Not necessary to predetermine its size.
@@ -125,11 +99,8 @@ typedef struct queue {
 
 A __stack__ is a container structure in which data is accessed in the reverse order in which it was stored.  In other words, data accessed is independent of content and satisfies "last in, first out" (LIFO).  One way to implement a stack is using an unsorted array of fixed size.
 ```c 
-typedef struct stack {
-  int capacityOfStack;
-  int topOfStack;
-  int itemsInTheStack[];
-  } STACK;
+typedef struct {
+}
 ```
 ### Pros
 * Used in backtracking.
@@ -147,8 +118,6 @@ A __binary search tree__ is a binary tree with a unique labelling such that for 
 ```c
 /* Type declaration for a binary search tree 
 */
-typedef struct bin_st {
-} BIN_ST;
 ```
 ### Pros
 ### Cons
@@ -172,7 +141,6 @@ A __heap__ is a binary tree which is completely filled up to its last row, which
 typedef struct {
 }  
 ```
-
 If the root of the tree has index _0_ then each node _i_ has a left and right __child__, along with a __parent__.  The attributes of an element _A[i]_ for _0 <= i < A.heap-size_ are given in the following table:
 
 Attribute | Value
@@ -195,9 +163,7 @@ A priority queue can also be implemented using a sorted or unsorted array, by in
 typedef struct {
 }
 ```
-
 ### Big-Oh properties 
-
 Operation | Heap (or any balanced tree) | Unsorted array | Sorted array
 --------- | --------------------------- | -------------- | ------------
 Add | _O(_ lg _n)_ | _O(1)_ | _O(n)_
