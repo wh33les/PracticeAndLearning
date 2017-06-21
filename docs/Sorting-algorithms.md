@@ -136,6 +136,51 @@ Runs in _O(n_ lg _n)_ time.
 <details>
 <summary>Click to expand. </summary>
 
+__Heapsort__ is an implementation of selection sort that uses a priority queue instead of an array.
+```c
+/* Heapsort implementation
+*/
+/* MISCELLANEOUS PREAMBLE MATERIAL */
+typedef struct {
+  int A[n]; /* n = A.length */
+  int heap_size; /* A.heap-size */
+} heap;
+/* Prototype declarations */
+  extractMin();
+  heapify(heap q, int position_of_key);
+  heapsort(int array_to_sort[], int array_size);
+
+/* BODY OF THE MAIN PROGRAM */
+
+/* ========== heapsort ==========
+   DESCRIPTION OF IT
+*/
+void heapsort(int array_to_sort[], int array_size) 
+{
+/* Local definitions */
+  int i, j; /* loop counters */
+  heap q; 
+/* Statements */
+  &q->array_size = 0; /* SAY WHAT THIS IS DOING */
+  for (j = 0; j < array_size; j++)
+    {
+    /* INCLUDE ERROR WARNING FOR HEAP OVERFLOW */
+    &q->array_size = &q->array_size + 1;
+    &q->&q[&q->array_size] = A[j];
+    heapify(&q, &q->array_size);
+    } /* for j */
+  for (i = 0; i < array_size; i++)
+    array_to_sort[i] = extractMin(&q); /* or extractMax */
+} 
+
+/* ========== heapify ==========
+   DESCRIPTION OF IT
+*/
+
+/* ========== extractMin ==========
+   DESCRIPTION OF IT
+*/
+```
 ### Pros
 * In place.
 
