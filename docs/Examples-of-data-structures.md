@@ -167,7 +167,13 @@ Max | _O(h)_
 </details>
 
 ## Priority queues/ heaps
-A __heap__ is a binary tree which is completely filled up to its lowest row, which is filled from the left to a certain point.  Each node  of the tree is stored as an element in an array.  The attributes of an array _A[0..n-1]_ that represents a heap are its length (_n_) and the size of the heap, which may be less than _A.length_.  If the root of the tree has index _0_ then each node _i_ has a left and right __child__, along with a __parent__.  The attributes of an element _A[i]_ for _0 <= i < A.heap-size_ are given in the following table:
+A __heap__ is a binary tree which is completely filled up to its last row, which is then filled from the left to a certain point.  Each node  of the tree is stored as an element in an array.  The attributes of an array _A[0..n-1]_ that represents a heap are its length (_n_) and the size of the heap, which may be less than _A.length_.  
+```c
+typedef struct {
+}  
+```
+
+If the root of the tree has index _0_ then each node _i_ has a left and right __child__, along with a __parent__.  The attributes of an element _A[i]_ for _0 <= i < A.heap-size_ are given in the following table:
 
 Attribute | Value
 ----------|------
@@ -178,3 +184,22 @@ _A[i].right_ | _A[2(i+1)]_
 If a value cannot be computed, for example, if _2i > A.heap-size_, then the value is `nil`.
 
 A __(max-)priority queue__ is a set _S_ permitting the usual dictionary operations Add and Max, along with ExtractMax, which finds and removes the largest key from _S_, and IncreaseKey, which increases the value of a key _x_ in _S_ to a new value, _k_.  A heap can be used to implement a priority queue.  
+### Pros
+* A heap can demonstrate a hierchary structure among data without using pointers.
+* Inserting a new element into a priority queue does not require reshifting of all existing keys; in fact, it only takes logarithmic time.  
+### Cons
+* Heaps only give a partial order.  Keys on the same level of the tree are incomparable.
+
+A priority queue can also be implemented using a sorted or unsorted array, by including a pointer to the highest priority (e.g., max) entry.  The pointer gets updated upon insertion/building or deleting.
+```c
+typedef struct {
+}
+```
+
+### Big-Oh properties 
+
+Operation | Heap (or any balanced tree) | Unsorted array | Sorted array
+--------- | --------------------------- | -------------- | ------------
+Add | _O(_ lg _n)_ | _O(1)_ | _O(n)_
+ExtractMax (Remove) | _O(_ lg _n)_ | _O(n)_ | O(1)   
+Max | _O(1)_ | _O(1)_ | _O(1)_
