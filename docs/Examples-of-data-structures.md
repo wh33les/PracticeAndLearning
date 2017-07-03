@@ -4,23 +4,40 @@
 <details>
 <summary>Click to expand. </summary>
 
-An __array__ is a data structure consisting of a list of __elements__ of the same type, for example integers, floats, or characters.  A character array is sometimes referred to as a __string__.  An array's length _n_ is fixed, except for in the case of a __dynamic array__, which doubles in length when the number of elements assigned to it has exceeded _n_.  Elements of an array are given by their __index__, or position in the array.  In C, indices begin at 0.  In other languages indices can begin at 1.  An array may be sorted or unsorted.
+An __array__ is a data structure consisting of a list of __elements__ of the same type, for example integers, floats, or characters.  A character array is sometimes referred to as a __string__.  An array's length _n_ is fixed unless it is a __dynamic array__, which for example can double in length when the number of elements assigned to it has exceeded _n_.  Elements of an array are given by their __index__, or position in the array.  In C, indices begin at 0.  In other languages indices can begin at 1.  An array may be sorted or unsorted.
 ```c
 /* Prompts the user to create an array of digits from 0 to 9 of size ARRAY_SIZE_n 
 */
-/* PREAMBLE MATERIAL */
-#define ARRAY_SIZE_n 10 /* In this example I've decided n=10. */
-int main(void)
+#include <stdio.h>
+#define ARRAY_SIZE_n 10 // In this example I've decided n=10.
+
+int main()
 {
   /* Local definitions */
-  int exampleArray[ARRAY_SIZE_n]; /* Defines the array exampleArray with size ARRAY_SIZE_n */
-  int i;
+  int exampleArray[ARRAY_SIZE_n]; // defines the array exampleArray with size ARRAY_SIZE_n 
+  int i; // counter variable for use in loops
   /* Gather input from the user */
-  for (i = 0; i < ARRAY_SIZE_n; i++)
-    printf"Enter a digit from 0 to 9"; /* Prompts the user for an entry of the array */
-      /* THEN VERIFY THE USER'S INPUT */
-    scanf("%d", &exampleArray[i]); /* Assigns the user's input value to exampleArray[i] */
-  /* PRINT THE ARRAY */
+  for( i = 0; i < ARRAY_SIZE_n; i++ )
+  {	  
+    printf("Enter a digit from 0 to 9: "); // prompts the user for an entry of the array 
+    scanf("%d", &exampleArray[i]); // assigns the user's input value to exampleArray[i] 
+    while( exampleArray[i] < 0 || exampleArray[i] > 9 ) // ensures the user follows the instructions
+	{	
+	  printf("No, enter a DIGIT, FROM 0 TO 9: "); // but presumes input is of type int
+	  scanf("%d", &exampleArray[i]);
+	} /* while */	
+  } /* for i */	
+  /* Print the array */
+  printf("Here's the array: \n { ");
+  for( i = 0; i < ARRAY_SIZE_n; i++ )
+  {
+    if( i != ARRAY_SIZE_n - 1 )
+	  printf("%d, ", exampleArray[i]);
+	else 
+	  printf("%d", exampleArray[i]);
+  } /* for i */
+  printf(" }"); 
+  /* Return */
   return 0;
 } /* main */
 ```
