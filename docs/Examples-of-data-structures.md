@@ -100,7 +100,7 @@ __Questions:__
 <details>
 <summary>Click to expand. </summary>
 
-A __queue__ is a container structure in which data is accessed in the order in which it was stored.  In other words, it is a set whose Remove (__Dequeue__) operation satisifies "first in, first out" (FIFO).  The Add operation is called __Enqueue__.  A queue can be implemented using an doubly-linked list _Q_ with attributes _Q.head_ and _Q.tail_.  
+A __queue__ is a container structure in which data is accessed in the order in which it was stored.  In other words, it is a set whose Remove (__Dequeue__) operation satisifies "first in, first out" (FIFO).  The Add operation is called __Enqueue__.  A queue can be implemented using a doubly-linked list _Q_ with attributes _Q.head_ and _Q.tail_.  
 ```c
 typedef struct {
 } 
@@ -117,12 +117,36 @@ typedef struct {
 A __stack__ is a container structure in which data is accessed in the reverse order in which it was stored.  In other words, data accessed is independent of content and satisfies "last in, first out" (LIFO).  One way to implement a stack is using an unsorted array of fixed size.
 ```c 
 typedef struct {
+  item_type theStack[];
+  int top;
+} stack;
+int push(stack S, item_type x)
+{
+  S.top = S.top + 1;
+  S[S.top] = x;
+  return 0;
+}
+item_type pop(stack S)
+{
+  if S.top == 0 
+    error "underflow";
+  else S.top = S.top - 1
+  return S[S.top+1];
 }
 ```
 ### Pros
 * Used in backtracking.
+* Best for when retrieval order doesn't matter.
 ### Cons
 * Use by programming languages presents security issues.
+
+Used in a depth-first search on a graph.
+
+Operation | Efficiency 
+--------- | -------- 
+Add (Push) | _O(1)_ 
+Remove (Pop) | _O(1)_ 
+
 </details>
 
 ## Hashtables
