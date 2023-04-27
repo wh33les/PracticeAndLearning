@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+
+<head>
+	<style>
+		div.boxed { /* Borders for the smaller elements */
+			border-style: solid;
+			border-width: 3.5px;
+			border-color: black;
+			margin:4px
+		}
+		p {
+			font-family:Arial,Helvetica,sans-serif;
+			font-size:19px;
+		}	
+	</style>	
+</head>
+
+<body>
+	<!-- Big box containing everything, is the same size as the pdf file -->
+	<div class="boxed" 
+		style="width:816px; height:528px; margin:auto; /* margin:auto centers the div */ ">
+		<!-- Biggest black box -->
+		<div class="boxed" 
+			style="width:98%; height:77%;">
+			<!-- Left big box -->	
+			<div class="boxed"
+				style="width:67%; height:95%; float:left; /* float:left makes sure the divs are next to each other */ ">
+			</div>
+			<!-- Right big box -->
+			<div class="boxed"
+				style="width:28%; height:65%; float:left;">
+				<div class="boxed"
+					style="width:90%; height:15%;">
+					<p style="margin-top:10px; margin-left:7px;"> 
+						Season: 
+						<select style="width:57%;"></select>
+					</p>
+				</div>
+				<div class="boxed"
+					style="width:90%; height:15%;">
+					<p style="margin-top:10px; margin-left:7px;"> 
+						Team: 
+						<select style="width:66.5%;"></select>
+					</p>
+				</div>
+			</div>
+		</div>
+		<div style="width:95%;
+			height:18%;
+			margin:auto;
+			padding:12px 0;">
+			<p> Note: The black outlined boxes are &lt;div&gt;&lt;/div&gt;s, the text is contained in &lt;p&gt;&lt;/p&gt;s, The gray
+rounded boxes with triangles are &lt;select&gt;&lt;/select&gt;s with no options added </p>
+		</div>
+	<!--<\div>-->
+</body>
+
+</html>
